@@ -40,6 +40,9 @@ public class Game {
         /**X first row*/
         if (cells[0][0] == cells[1][0] && cells[1][0] == cells[2][0] && cells[1][0] != '.') {
             return cells[0][0] == 'X' ? Status.X_WIN : Status.O_WIN;
+            /**Y first row*/
+        } else if (cells[0][0] == cells[0][1] && cells[0][1] == cells[0][2] && cells[0][1] != '.') {
+            return cells[0][0] == 'X' ? Status.X_WIN : Status.O_WIN;
         }
 
 
@@ -118,11 +121,9 @@ public class Game {
 
     public void putCoordinateMessage(ShootStrategy shootStrategy) {
         String message = "Put coordinates format: x y (0 to 2)";
-        // ConsoleOutputStream consoleOutputStream = new ConsoleOutputStream(message);
-        //  PrintStream printStream = new PrintStream(consoleOutputStream);
 
         if (shootStrategy.getClass().equals(ConsoleShootStrategy.class)) {
-            // System.setOut(printStream);
+
             System.out.println("Put coordinates format: x y (0 to 2)");
         }
     }
