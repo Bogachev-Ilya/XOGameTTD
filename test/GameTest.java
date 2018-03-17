@@ -84,6 +84,14 @@ public class GameTest {
     }
 
     @Test
+    public void testIsWin_Diagonal_Right_Left() {
+        game.setShootPoint(new Point(2, 0), 'X');
+        game.setShootPoint(new Point(1, 1), 'X');
+        game.setShootPoint(new Point(0, 2), 'X');
+        assertEquals(Game.Status.X_WIN, game.getGameStatus());
+    }
+
+    @Test
     public void testSetShootPoint() {
         Point point = new Point(1, 0);
         char x = 'X';
