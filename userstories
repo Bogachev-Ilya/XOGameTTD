@@ -1,0 +1,8 @@
+1. I want to have a char massive [][]
+2. I want initialise a field to dot.
+3. I want to define a winner when three in row are equals.
+4. I want to put to the wanted cell.
+5. I want to call a field in a specific format.
+6. Check a cell before turn.
+7. I want a draw.
+8. I want the player make coordinate through space.
