@@ -39,6 +39,13 @@ public class GameTest {
         assertEquals(Game.Status.X_WIN, game.getGameStatus());
     }
 
+    @Test
+    public void testIsWin_Y_First_Row() {
+        game.setShootPoint(new Point(0, 0), 'X');
+        game.setShootPoint(new Point(0, 1), 'X');
+        game.setShootPoint(new Point(0, 2), 'X');
+        assertEquals(Game.Status.X_WIN, game.getGameStatus());
+    }
 
     @Test
     public void testSetShootPoint() {
@@ -81,7 +88,6 @@ public class GameTest {
         for (int i = 0; i < Game.SIZE; i++) {
             for (int j = 0; j < Game.SIZE; j++) {
                 game.setShootPoint(new Point(j, i), cells[j][i]);
-
             }
         }
         assertEquals(Game.Status.DRAW, game.getGameStatus());
