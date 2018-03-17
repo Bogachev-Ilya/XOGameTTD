@@ -52,7 +52,9 @@ public class Game {
             /**Y middle row*/
         } else if (cells[1][0] == cells[1][1] && cells[1][1] == cells[1][2] && cells[1][1] != '.') {
             return cells[1][0] == 'X' ? Status.X_WIN : Status.O_WIN;
-        }
+        }     /**Y last row*/
+         else if (cells[2][0] == cells[2][1] && cells[2][1] == cells[2][2] && cells[2][1] != '.') {
+        return cells[2][0] == 'X' ? Status.X_WIN : Status.O_WIN;}
 
 
         for (int i = 0; i < SIZE; i++) {
