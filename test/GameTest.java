@@ -60,6 +60,13 @@ public class GameTest {
         game.setShootPoint(new Point(2, 2), 'X');
         assertEquals(Game.Status.X_WIN, game.getGameStatus());
     }
+    @Test
+    public void testIsWin_Y_Middle_Row() {
+        game.setShootPoint(new Point(1, 0), 'X');
+        game.setShootPoint(new Point(1, 1), 'X');
+        game.setShootPoint(new Point(1, 2), 'X');
+        assertEquals(Game.Status.X_WIN, game.getGameStatus());
+    }
 
     @Test
     public void testSetShootPoint() {
