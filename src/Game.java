@@ -139,9 +139,7 @@ public class Game {
 
     public void putCoordinateMessage(ShootStrategy shootStrategy) {
         String message = "Put coordinates format: x y (0 to 2)";
-
         if (shootStrategy.getClass().equals(ConsoleShootStrategy.class)) {
-
             System.out.println("Put coordinates format: x y (0 to 2)");
         }
     }

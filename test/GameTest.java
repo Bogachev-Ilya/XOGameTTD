@@ -92,6 +92,15 @@ public class GameTest {
     }
 
     @Test
+    public void testOutPutStream(){
+        ByteArrayOutputStream mockOutputstream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(mockOutputstream));
+        String message = "Put coordinates format: x y (0 to 2)";
+        System.out.print(message);
+        assertEquals(message, mockOutputstream.toString());
+    }
+
+    @Test
     public void testSetShootPoint() {
         Point point = new Point(1, 0);
         char x = 'X';
