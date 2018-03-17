@@ -58,6 +58,9 @@ public class Game {
         }   /**Diagonal left-right*/
         else if (cells[0][0] == cells[1][1] && cells[1][1] == cells[2][2] && cells[1][1] != '.') {
             return cells[0][0] == 'X' ? Status.X_WIN : Status.O_WIN;
+        }   /**Diagonal right-left*/
+        else if (cells[2][0] == cells[1][1] && cells[1][1] == cells[0][2] && cells[1][1] != '.') {
+            return cells[2][0] == 'X' ? Status.X_WIN : Status.O_WIN;
         }
 
 
