@@ -46,7 +46,9 @@ public class Game {
             /**X middle row */
         } else if (cells[0][1] == cells[1][1] && cells[1][1] == cells[2][1] && cells[1][1] != '.') {
             return cells[0][1] == 'X' ? Status.X_WIN : Status.O_WIN;
-        }
+            /**X last row*/
+        } else if (cells[0][2] == cells[1][2] && cells[1][2] == cells[2][2] && cells[1][2] != '.') {
+        return cells[0][2] == 'X' ? Status.X_WIN : Status.O_WIN;}
 
 
         for (int i = 0; i < SIZE; i++) {
